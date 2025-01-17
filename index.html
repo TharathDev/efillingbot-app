@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Filling Bot App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <h1>Invoice Processor</h1>
+      
+      <form id="invoice-form">
+        <div class="form-group">
+          <label for="textJsContent">Meta Data:</label>
+        <div class="textarea-container">
+          <textarea id="textJsContent" placeholder="Enter Meta Data here..." required></textarea>
+          <button type="button" class="paste-button" onclick="pasteToTextJsContent()">Paste</button>
+          <button class="clear-button">Clear</button>
+        </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="jsonData">JSON Data:</label>
+          <div class="textarea-container">
+            <textarea id="jsonData" rows="10" placeholder="Enter JSON Data here..." required></textarea>
+            <button type="button" class="paste-button" onclick="pasteToJsonData()">Paste</button>
+            <button class="clear-button">Clear</button>
+          </div>
+        </div>
+        
+        <button type="submit">Process Invoices</button>
+      </form>
+
+      <div class="results-container">
+        <h2>Processing Results</h2>
+        <div id="results"></div>
+      </div>
+
+      <div class="terminal-container">
+        <div class="terminal-header">
+          <span>Terminal Output</span>
+          <button id="toggle-terminal">▲</button>
+        </div>
+        <div id="terminal" class="terminal-output collapsed"></div>
+      </div>
+    </div>
+
+    <div class="side-panel">
+      <h3>Request Body</h3>
+      <div id="body-data"></div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
