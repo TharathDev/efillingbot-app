@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Filling Bot App 1.0.2</title>
+  <title>E-Filling Bot App 1.0.2 - Salary Processing</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="main-content">
-      <h1>Invoice Processor</h1>
+      <h1>Salary Processor</h1>
       
-      <form id="invoice-form">
+      <form id="salary-form">
         <div class="form-group">
           <label for="textJsContent">Meta Data:</label>
-        <div class="textarea-container">
-          <textarea id="textJsContent" placeholder="Enter Meta Data here..." required></textarea>
-          <button type="button" class="paste-button" onclick="pasteToTextJsContent()">Paste</button>
-          <button class="clear-button">Clear</button>
-        </div>
+          <div class="textarea-container">
+            <textarea id="textJsContent" placeholder="Enter Meta Data here..." required></textarea>
+            <button type="button" class="paste-button" onclick="pasteToTextJsContent()">Paste</button>
+            <button class="clear-button">Clear</button>
+          </div>
         </div>
         
         <div class="form-group">
@@ -30,13 +30,13 @@
           </div>
         </div>
         
-        <button type="submit">Process Invoices</button>
+        <button type="submit">Process Salary</button>
       </form>
 
       <div class="results-container">
         <h2>Processing Results</h2>
         <div id="results"></div>
-        <button id="switch-to-salary" class="switch-button">Switch to Salary Processing</button>
+        <button id="switch-to-invoice" class="switch-button">Switch to Invoice Processing</button>
       </div>
 
       <div class="terminal-container">
@@ -47,13 +47,8 @@
         <div id="terminal" class="terminal-output collapsed"></div>
       </div>
     </div>
-
-    <!-- <div class="side-panel">
-      <h3>Request Body</h3>
-      <div id="body-data"></div>
-    </div> -->
   </div>
 
-  <script src="renderer.js"></script>
+  <script src="salary-renderer.js"></script>
 </body>
 </html>

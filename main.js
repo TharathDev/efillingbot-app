@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-const { processInvoices } = require('./backend.js');
+const { processInvoices } = require('./backend');
+const { processSalary } = require('./salary');
 
 let mainWindow;
 
@@ -35,6 +36,17 @@ ipcMain.handle('process-invoices', async (event, { textJsContent, jsonData }) =>
     return { success: true, data: results };
   } catch (error) {
     return { success: false, error: error.message };
+  }
+});
+
+ipcMain.handle('process-salary', async (event, { textJsContent, jsonData }) => {
+  try {
+    return await processSalary(textJsContent, jsonData, (progress) => {
+      event.sender.send('processing-progress', progress);
+    });
+  } catch (error) {
+    console.error('Salary processing error:', error);
+    throw error;
   }
 });
 

@@ -1,0 +1,67 @@
+fetch("https://efiling.tax.gov.kh/gdtefilingweb/purchase-sale/savepurchase-saletax-api", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-ch-ua": "\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Microsoft Edge\";v=\"132\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
+    "x-xsrf-token": "8d2b22fd-99bd-4a98-a0f5-c86f47178ace",
+    "cookie": "XSRF-TOKEN=8d2b22fd-99bd-4a98-a0f5-c86f47178ace; OWPJSESSIONID=YWI4MzVhOTYtMTIzZS00N2E5LWI5ZTItYjhmNTE1MjFhMWJl; TS01214ff7=01bf609f0875a6c942c2ac3822a75deec655cc60fe12b4b0590e3a67001b7e48ab3ac5fef929f155c4b2a56a565b4ddff02eb04dc2; BIGipServerPRO_OWP_WEB_SVR_POOL=372315308.47873.0000; TS01551615=01bf609f083d6506f590f285c0e62e08dbc0f6b9247588c5265acb5d5de413ae579f647893687fe336b3f0c0f8ac48ee9d481f52d3; TS39867566027=080cb2d710ab200082212b3a1774a495ec86d696c69457784f89cfd413dffd62150663a6ce4b69de085b6dd92211300020621ec1ad5f7618101d97d093a334f2f87978c178e1dee420fab78949680bfc9d73164d182e2ed10f5088962ed811db",
+    "Referer": "https://efiling.tax.gov.kh/gdtefilingweb/entry/purchase-sale/vlkNxxZXvNwn",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": "{\"COM_ID\":\"vlkNxxZXvNwn\",\"TAX_BRANCH\":2014018,\"IS_BRANCH\":false,\"COMPANY_BRANCH\":0,\"EXCHANGE_RATE\":11,\"MONTH\":\"12\",\"YEAR\":\"2024\",\"TAXPAYER_TYPE\":2,\"ITEM_ID\":\"JknEV505OpZQ\",\"INV_DATE\":\"2024-12-01\",\"INV_NO\":\"2024-0337\",\"TOTAL_AMT\":422625,\"TRANSACTION\":2,\"VAT_TYPE\":1,\"CATEGORY\":1,\"NONE_VAT_AMT\":0,\"PLT_AMT\":0,\"SPEC_AMT\":0,\"ACCOM_AMT\":7533,\"COM_TYPE\":2,\"PPT_RATE\":1,\"SECTOR_TYPE\":0,\"TREASURY_INV_NO\":\"\",\"INV_REMARK\":\"បន្ទប់ស្នាក់នៅតំលៃ15$  បន្ទប់ស្នាក់នៅតំលៃ20$\",\"STCS_AMT\":0}",
+  "method": "POST"
+});
+
+ok
+
+===
+ month salary
+
+fetch("https://efiling.tax.gov.kh/gdtefilingweb/api/salary/list", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-ch-ua": "\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Microsoft Edge\";v=\"132\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
+    "x-xsrf-token": "8d2b22fd-99bd-4a98-a0f5-c86f47178ace",
+    "cookie": "XSRF-TOKEN=8d2b22fd-99bd-4a98-a0f5-c86f47178ace; OWPJSESSIONID=YWI4MzVhOTYtMTIzZS00N2E5LWI5ZTItYjhmNTE1MjFhMWJl; TS01214ff7=01bf609f0875a6c942c2ac3822a75deec655cc60fe12b4b0590e3a67001b7e48ab3ac5fef929f155c4b2a56a565b4ddff02eb04dc2; BIGipServerPRO_OWP_WEB_SVR_POOL=372315308.47873.0000; TS01551615=01bf609f08b29f67754b90fc24ec27e34e5f96cbacc63fc8ff5a224a0718b9ccd810e99c1cb3c3d6678f9a0e25cc471d986bed4e9a; TS39867566027=080cb2d710ab20003d19d9d3d84a7a52fb421313abd72e68c749f57096bbaee981f3e2d7bb8f4bad08131558d2113000ce91150e2e55065fc841aaada86f0384e83299dc2fc9b0d64ea78e26bbd9b173ad9f27b36b7e5a5514f1313d9cc2b08a",
+    "Referer": "https://efiling.tax.gov.kh/gdtefilingweb/entry/tax-salary/vlkNxxZXvNwn",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": "{\"COM_ID\":\"vlkNxxZXvNwn\",\"MONTH\":\"11\",\"YEAR\":\"2024\",\"CURRENT_MONTH\":\"12\",\"CURRENT_YEAR\":\"2024\",\"IS_BRANCH\":false,\"COMPANY_BRANCH\":0,\"SORT_BY\":0,\"SORT_MODE\":0,\"PAGE\":1,\"ROW\":25,\"KEYWORD\":\"\"}",
+  "method": "POST"
+});
+
+fetch("https://efiling.tax.gov.kh/gdtefilingweb/api/salary/import", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/json;charset=UTF-8",
+    "sec-ch-ua": "\"Not A(Brand\";v=\"8\", \"Chromium\";v=\"132\", \"Microsoft Edge\";v=\"132\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
+    "x-xsrf-token": "8d2b22fd-99bd-4a98-a0f5-c86f47178ace",
+    "cookie": "XSRF-TOKEN=8d2b22fd-99bd-4a98-a0f5-c86f47178ace; OWPJSESSIONID=YWI4MzVhOTYtMTIzZS00N2E5LWI5ZTItYjhmNTE1MjFhMWJl; TS01214ff7=01bf609f0875a6c942c2ac3822a75deec655cc60fe12b4b0590e3a67001b7e48ab3ac5fef929f155c4b2a56a565b4ddff02eb04dc2; BIGipServerPRO_OWP_WEB_SVR_POOL=372315308.47873.0000; TS01551615=01bf609f08b29f67754b90fc24ec27e34e5f96cbacc63fc8ff5a224a0718b9ccd810e99c1cb3c3d6678f9a0e25cc471d986bed4e9a; TS39867566027=080cb2d710ab2000b75363118c368d2545461f60518bf2b85a0cf96d624a51a54e4d679f4258835108c35bb8bf113000c6670b6badcd0094c82d5fe49a8995acb9e108cdf2d66193d101f79a7259e07a4dc1cc5d615b315719a584d0c8b05d2b",
+    "Referer": "https://efiling.tax.gov.kh/gdtefilingweb/entry/tax-salary/vlkNxxZXvNwn",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": "{\"COM_ID\":\"vlkNxxZXvNwn\",\"MONTH\":\"12\",\"YEAR\":\"2024\",\"IS_BRANCH\":false,\"COMPANY_BRANCH\":0,\"TAX_BRANCH\":2014018,\"COM_TYPE\":2,\"REC\":[{\"ID\":\"zmNkDwwM9p3K\"},{\"ID\":\"eKN8xbbymNMJ\"},{\"ID\":\"dgNab88Z9pLW\"},{\"ID\":\"GxNB6BBdwNQX\"},{\"ID\":\"ZXAraWWZVEle\"}]}",
+  "method": "POST"
+});

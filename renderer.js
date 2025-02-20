@@ -5,6 +5,10 @@ async function pasteToTextJsContent() {
   updateBodyDataDisplay({}, {});
 }
 
+document.getElementById('switch-to-salary').addEventListener('click', () => {
+  window.location.href = 'salary.html';
+});
+
 function clearTextJsContent() {
   document.getElementById('textJsContent').value = '';
   updateBodyDataDisplay();
@@ -55,6 +59,8 @@ function updateBodyDataDisplay(textJsData = {}, jsonData = {}) {
         bodyObject[key] = value.trim();
       }
     });
+
+    console.log("Request Body Data:", bodyObject);
 
     // Clear existing content
     bodyData.innerHTML = '';
